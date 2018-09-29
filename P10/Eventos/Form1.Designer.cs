@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnPagar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtbPrecio = new System.Windows.Forms.TextBox();
+            this.txtbCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPlatillo = new System.Windows.Forms.ComboBox();
@@ -37,8 +40,6 @@
             this.btnComer = new System.Windows.Forms.Button();
             this.lbPagado = new System.Windows.Forms.Label();
             this.lbComido = new System.Windows.Forms.Label();
-            this.txtbCantidad = new System.Windows.Forms.TextBox();
-            this.txtbPrecio = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +53,7 @@
             this.btnPagar.TabIndex = 0;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // groupBox1
             // 
@@ -67,6 +69,22 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menú";
+            // 
+            // txtbPrecio
+            // 
+            this.txtbPrecio.Enabled = false;
+            this.txtbPrecio.Location = new System.Drawing.Point(388, 54);
+            this.txtbPrecio.Name = "txtbPrecio";
+            this.txtbPrecio.Size = new System.Drawing.Size(100, 22);
+            this.txtbPrecio.TabIndex = 6;
+            // 
+            // txtbCantidad
+            // 
+            this.txtbCantidad.Enabled = false;
+            this.txtbCantidad.Location = new System.Drawing.Point(232, 54);
+            this.txtbCantidad.Name = "txtbCantidad";
+            this.txtbCantidad.Size = new System.Drawing.Size(100, 22);
+            this.txtbCantidad.TabIndex = 5;
             // 
             // label4
             // 
@@ -93,6 +111,7 @@
             this.cmbPlatillo.Name = "cmbPlatillo";
             this.cmbPlatillo.Size = new System.Drawing.Size(121, 24);
             this.cmbPlatillo.TabIndex = 1;
+            this.cmbPlatillo.SelectedIndexChanged += new System.EventHandler(this.cmbPlatillo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -112,6 +131,7 @@
             this.btnComer.Text = "Comer";
             this.btnComer.UseVisualStyleBackColor = true;
             this.btnComer.Visible = false;
+            this.btnComer.Click += new System.EventHandler(this.btnComer_Click);
             // 
             // lbPagado
             // 
@@ -121,6 +141,7 @@
             this.lbPagado.Size = new System.Drawing.Size(110, 17);
             this.lbPagado.TabIndex = 3;
             this.lbPagado.Text = "MensajePagado";
+            this.lbPagado.Visible = false;
             // 
             // lbComido
             // 
@@ -132,27 +153,16 @@
             this.lbComido.Text = "MensajeComido";
             this.lbComido.Visible = false;
             // 
-            // txtbCantidad
-            // 
-            this.txtbCantidad.Location = new System.Drawing.Point(232, 54);
-            this.txtbCantidad.Name = "txtbCantidad";
-            this.txtbCantidad.Size = new System.Drawing.Size(100, 22);
-            this.txtbCantidad.TabIndex = 5;
-            // 
-            // txtbPrecio
-            // 
-            this.txtbPrecio.Location = new System.Drawing.Point(388, 54);
-            this.txtbPrecio.Name = "txtbPrecio";
-            this.txtbPrecio.Size = new System.Drawing.Size(100, 22);
-            this.txtbPrecio.TabIndex = 6;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(259, 201);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(277, 203);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 184);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 184);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // Form1
             // 
